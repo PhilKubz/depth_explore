@@ -1,0 +1,24 @@
+[gd_scene load_steps=5 format=3 uid="uid://bpyqt8foxaxa0"]
+
+[ext_resource type="Texture2D" uid="uid://bl8vlxohljwf8" path="res://Textures/Cartoon Ground/696.jpg" id="1_fksj8"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_1ciiu"]
+lightmap_size_hint = Vector2i(12, 12)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7hiws"]
+albedo_texture = ExtResource("1_fksj8")
+uv1_scale = Vector3(35, 35, 35)
+uv1_triplanar = true
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_hy5jt"]
+
+[node name="World" type="Node3D"]
+
+[node name="Ground" type="MeshInstance3D" parent="."]
+transform = Transform3D(200, 0, 0, 0, 200, 0, 0, 0, 200, 0, 0, 0)
+mesh = SubResource("PlaneMesh_1ciiu")
+surface_material_override/0 = SubResource("StandardMaterial3D_7hiws")
+
+[node name="Reference character" type="MeshInstance3D" parent="."]
+transform = Transform3D(1.1, 0, 0, 0, 1.1, 0, 0, 0, 1.1, 0, 1.33428, 0)
+mesh = SubResource("CapsuleMesh_hy5jt")
