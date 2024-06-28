@@ -1,10 +1,13 @@
-[gd_scene load_steps=6 format=3 uid="uid://bpyqt8foxaxa0"]
+[gd_scene load_steps=9 format=3 uid="uid://bpyqt8foxaxa0"]
 
 [ext_resource type="PackedScene" uid="uid://brxngsya7g3ya" path="res://Scenes/Ground.tscn" id="1_f6y0w"]
 [ext_resource type="PackedScene" uid="uid://da7xu8fx1x211" path="res://Scenes/Crypt_large.tscn" id="2_dkdsg"]
 [ext_resource type="PackedScene" uid="uid://kfsut7rikqty" path="res://Scenes/Skybox.tscn" id="2_g0lrp"]
 [ext_resource type="PackedScene" uid="uid://calirx1x8qoxs" path="res://Scenes/Character.tscn" id="3_qe6be"]
 [ext_resource type="PackedScene" uid="uid://dky8wcfhkx0uk" path="res://Scenes/Ghost.tscn" id="4_pkcso"]
+[ext_resource type="PackedScene" uid="uid://b8jun2mcvr3wu" path="res://Scenes/Crypt_small.tscn" id="6_6ijt8"]
+[ext_resource type="PackedScene" uid="uid://d3yba6eqervpb" path="res://Scenes/Props/Grave_1.tscn" id="7_13ktf"]
+[ext_resource type="PackedScene" uid="uid://cqdyn8cjulwnx" path="res://Scenes/Props/Grave_Tombstone_1.tscn" id="8_34byv"]
 
 [node name="World" type="Node3D"]
 
@@ -26,3 +29,24 @@ transform = Transform3D(-5.47841, 0, 0.13188, 0, 5.48, 0, -0.13188, 0, -5.47841,
 
 [node name="Ghost" parent="Background" instance=ExtResource("4_pkcso")]
 transform = Transform3D(-2.7, 0, -2.36041e-07, 0, 2.7, 0, 2.36041e-07, 0, -2.7, 0, 0, 27.4848)
+
+[node name="Crypt_Small" parent="Background" instance=ExtResource("6_6ijt8")]
+transform = Transform3D(-3.01983, 0, -4.41018, 0, 5.345, 0, 4.41018, 0, -3.01983, 30.102, 0, 10.1)
+
+[node name="Crypt_Small2" parent="Background" instance=ExtResource("6_6ijt8")]
+transform = Transform3D(-2.96372, 0, 4.3939, 0, 5.3, 0, -4.3939, 0, -2.96372, -30.1, 0, 10.1)
+
+[node name="Grave_1" parent="Background" instance=ExtResource("7_13ktf")]
+transform = Transform3D(2.25, 0, 0, 0, 2.25, 0, 0, 0, 2.25, 18.8353, 0, 22.4527)
+
+[node name="Grave_1" parent="Background/Grave_1" instance=ExtResource("7_13ktf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.02319, 0, 0.00199413)
+
+[node name="Grave_2" parent="Background" instance=ExtResource("7_13ktf")]
+transform = Transform3D(2.25, 0, 0, 0, 2.25, 0, 0, 0, 2.25, 14.2767, 0, 22.4527)
+
+[node name="Grave_1" parent="Background/Grave_2" instance=ExtResource("7_13ktf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.02319, 0, 0.00199413)
+
+[node name="Grave_Tombstone_1" parent="." instance=ExtResource("8_34byv")]
+transform = Transform3D(-2.25, 0, -1.96701e-07, 0, 2.25, 0, 1.96701e-07, 0, -2.25, 9.79812, -3.72529e-07, 22.3619)

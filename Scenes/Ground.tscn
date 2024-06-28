@@ -6,7 +6,11 @@
 lightmap_size_hint = Vector2i(12, 12)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_yox6d"]
+albedo_color = Color(0.851769, 0.851769, 0.851769, 1)
 albedo_texture = ExtResource("1_e4tft")
+metallic_specular = 0.0
+clearcoat_enabled = true
+clearcoat_roughness = 0.0
 uv1_scale = Vector3(35, 35, 35)
 uv1_triplanar = true
 
