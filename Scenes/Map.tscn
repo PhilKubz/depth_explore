@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://bpyqt8foxaxa0"]
+[gd_scene load_steps=6 format=3 uid="uid://bpyqt8foxaxa0"]
 
 [ext_resource type="PackedScene" uid="uid://brxngsya7g3ya" path="res://Scenes/Ground.tscn" id="1_f6y0w"]
 [ext_resource type="PackedScene" uid="uid://da7xu8fx1x211" path="res://Scenes/Crypt_large.tscn" id="2_dkdsg"]
+[ext_resource type="PackedScene" uid="uid://kfsut7rikqty" path="res://Scenes/Skybox.tscn" id="2_g0lrp"]
 [ext_resource type="PackedScene" uid="uid://calirx1x8qoxs" path="res://Scenes/Character.tscn" id="3_qe6be"]
 [ext_resource type="PackedScene" uid="uid://dky8wcfhkx0uk" path="res://Scenes/Ghost.tscn" id="4_pkcso"]
 
@@ -9,6 +10,8 @@
 
 [node name="Ground" parent="." instance=ExtResource("1_f6y0w")]
 transform = Transform3D(200, 0, 0, 0, 200, 0, 0, 0, 200, 0, 0, 0)
+
+[node name="Skybox" parent="Ground" instance=ExtResource("2_g0lrp")]
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(-0.870287, 6.48414e-09, -0.492545, -0.123498, 0.968056, 0.218211, 0.476811, 0.250735, -0.842486, -78.307, 80.7233, -117.791)

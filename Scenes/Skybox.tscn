@@ -1,0 +1,19 @@
+[gd_scene load_steps=5 format=3 uid="uid://kfsut7rikqty"]
+
+[ext_resource type="Texture2D" uid="uid://8xyq7dbff4b1" path="res://Textures/roaringdarksky.jpg" id="1_5loya"]
+
+[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_fyy5b"]
+panorama = ExtResource("1_5loya")
+
+[sub_resource type="Sky" id="Sky_cc0yc"]
+sky_material = SubResource("PanoramaSkyMaterial_fyy5b")
+
+[sub_resource type="Environment" id="Environment_53vq2"]
+background_mode = 2
+background_color = Color(0.654902, 0, 0, 1)
+sky = SubResource("Sky_cc0yc")
+
+[node name="Skybox" type="Node3D"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_53vq2")

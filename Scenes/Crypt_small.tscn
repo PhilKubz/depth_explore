@@ -1,5 +1,41 @@
-[gd_scene format=3 uid="uid://b8jun2mcvr3wu"]
+[gd_scene load_steps=7 format=3 uid="uid://b8jun2mcvr3wu"]
+
+[ext_resource type="PackedScene" uid="uid://bhqu7u5pvjut7" path="res://Assets/GLB format/crypt-small-entrance.glb" id="1_5boup"]
+[ext_resource type="PackedScene" uid="uid://1phwqh2mjtw7" path="res://Assets/GLB format/crypt-small-roof.glb" id="2_be21n"]
+[ext_resource type="PackedScene" uid="uid://d3sfjj1t01iqk" path="res://Assets/GLB format/crypt-small.glb" id="3_0o14k"]
+[ext_resource type="PackedScene" uid="uid://jbise7m4l3vt" path="res://Assets/GLB format/crypt-door.glb" id="4_yk7jb"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_a7tci"]
+size = Vector3(1, 1, 1.07181)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_3t1v6"]
+size = Vector3(0.663452, 0.292923, 1)
 
 [node name="Crypt_Small" type="Node3D"]
 
 [node name="StaticBody3D" type="StaticBody3D" parent="."]
+
+[node name="Crypt_Mesh" type="Node3D" parent="StaticBody3D"]
+
+[node name="crypt-small-entrance2" parent="StaticBody3D/Crypt_Mesh" instance=ExtResource("1_5boup")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0016591, 0, 0.46394)
+
+[node name="crypt-small-roof2" parent="StaticBody3D/Crypt_Mesh" instance=ExtResource("2_be21n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00305223, 0.967886, -0.00700319)
+
+[node name="crypt-small2" parent="StaticBody3D/Crypt_Mesh" instance=ExtResource("3_0o14k")]
+
+[node name="crypt-door2" parent="StaticBody3D/Crypt_Mesh" instance=ExtResource("4_yk7jb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.201279, 0, 0.443696)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.47024, 0.0142719)
+shape = SubResource("BoxShape3D_a7tci")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(0.823325, 0.567571, 0, -0.567571, 0.823325, 0, 0, 0, 1, 0.191968, 1.10621, 0)
+shape = SubResource("BoxShape3D_3t1v6")
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(0.84372, -0.536785, 0, 0.536785, 0.84372, 0, 0, 0, 1, -0.198581, 1.11767, 3.17097e-05)
+shape = SubResource("BoxShape3D_3t1v6")
