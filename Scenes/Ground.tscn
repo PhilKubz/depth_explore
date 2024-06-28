@@ -1,0 +1,26 @@
+[gd_scene load_steps=5 format=3 uid="uid://brxngsya7g3ya"]
+
+[ext_resource type="Texture2D" uid="uid://bl8vlxohljwf8" path="res://Textures/Cartoon Ground/696.jpg" id="1_e4tft"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_x2toy"]
+lightmap_size_hint = Vector2i(12, 12)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_yox6d"]
+albedo_texture = ExtResource("1_e4tft")
+uv1_scale = Vector3(35, 35, 35)
+uv1_triplanar = true
+
+[sub_resource type="HeightMapShape3D" id="HeightMapShape3D_0abdj"]
+
+[node name="Ground" type="Node3D"]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+
+[node name="Ground" type="MeshInstance3D" parent="StaticBody3D"]
+mesh = SubResource("PlaneMesh_x2toy")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_yox6d")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
+shape = SubResource("HeightMapShape3D_0abdj")

@@ -1,0 +1,45 @@
+[gd_scene load_steps=8 format=3 uid="uid://da7xu8fx1x211"]
+
+[ext_resource type="PackedScene" uid="uid://dwkd57qsriu5q" path="res://Assets/GLB format/crypt-large.glb" id="1_i1ri4"]
+[ext_resource type="PackedScene" uid="uid://d1gxkny5bsfbe" path="res://Assets/GLB format/crypt-large-roof.glb" id="2_vcaje"]
+[ext_resource type="PackedScene" uid="uid://bb00o447uf7ph" path="res://Assets/GLB format/crypt-small-entrance-alternative.glb" id="3_dny6a"]
+[ext_resource type="PackedScene" uid="uid://jbise7m4l3vt" path="res://Assets/GLB format/crypt-door.glb" id="4_1l8lv"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_twtop"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_mks1a"]
+size = Vector3(0.028511, 2.29492, 0.109249)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ovmgc"]
+size = Vector3(2.90247, 1.27509, 0.976074)
+
+[node name="Crypt_Large" type="Node3D"]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.408631, 1.19209e-07, -0.00339031)
+
+[node name="Crypt" type="Node3D" parent="StaticBody3D"]
+
+[node name="crypt-large2" parent="StaticBody3D/Crypt" instance=ExtResource("1_i1ri4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.425685, 0, 0.432864)
+
+[node name="crypt-large-roof2" parent="StaticBody3D/Crypt" instance=ExtResource("2_vcaje")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.416471, 1.00209, 0.432255)
+
+[node name="crypt-small-entrance-alternative2" parent="StaticBody3D/Crypt" instance=ExtResource("3_dny6a")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.424151, -0.00549555, 1.40496)
+
+[node name="crypt-door2" parent="StaticBody3D/Crypt" instance=ExtResource("4_1l8lv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.220092, -1.19209e-07, 1.37446)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1.13657, 0, 0, 0, 2.04908, 0.437564, 0.536829, 0.45027)
+shape = SubResource("BoxShape3D_twtop")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(19.5968, -0.0707584, 0, 13.6059, 0.101914, 0, 0, 0, 19.2938, 0.209201, 1.16357, 0.429526)
+shape = SubResource("BoxShape3D_mks1a")
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(0.0797002, -0.45436, 0, 0.115317, 0.314028, 0, 0, 0, 2.11642, 0.585811, 1.11567, 0.443617)
+shape = SubResource("BoxShape3D_ovmgc")

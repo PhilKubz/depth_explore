@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://dky8wcfhkx0uk"]
+
+[ext_resource type="PackedScene" uid="uid://c0k756qmktu7g" path="res://Assets/GLB format/character-ghost.glb" id="1_8fvsa"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_nw480"]
+radius = 0.322242
+height = 1.17264
+
+[node name="Ghost" type="Node3D"]
+
+[node name="CharacterBody3D" type="CharacterBody3D" parent="."]
+
+[node name="character-ghost2" parent="CharacterBody3D" instance=ExtResource("1_8fvsa")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="CharacterBody3D"]
+transform = Transform3D(0.61, 0, 0, 0, 0.61, 0, 0, 0, 0.61, 0, 0.405197, 0)
+shape = SubResource("CapsuleShape3D_nw480")

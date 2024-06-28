@@ -1,0 +1,29 @@
+[gd_scene load_steps=6 format=3 uid="uid://bpyqt8foxaxa0"]
+
+[ext_resource type="Texture2D" uid="uid://bl8vlxohljwf8" path="res://Textures/Cartoon Ground/696.jpg" id="1_fksj8"]
+[ext_resource type="PackedScene" uid="uid://da7xu8fx1x211" path="res://Scenes/Crypt.tscn" id="2_dkdsg"]
+[ext_resource type="PackedScene" uid="uid://calirx1x8qoxs" path="res://Scenes/Character.tscn" id="3_qe6be"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_1ciiu"]
+lightmap_size_hint = Vector2i(12, 12)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7hiws"]
+albedo_texture = ExtResource("1_fksj8")
+uv1_scale = Vector3(35, 35, 35)
+uv1_triplanar = true
+
+[node name="World" type="Node3D"]
+
+[node name="Ground" type="MeshInstance3D" parent="."]
+transform = Transform3D(200, 0, 0, 0, 200, 0, 0, 0, 200, 0.0031271, 0.013072, 0.00380802)
+mesh = SubResource("PlaneMesh_1ciiu")
+surface_material_override/0 = SubResource("StandardMaterial3D_7hiws")
+
+[node name="Crypt" parent="." instance=ExtResource("2_dkdsg")]
+transform = Transform3D(-5.47841, 0, 0.13188, 0, 5.48, 0, -0.13188, 0, -5.47841, -0.246366, 4.76837e-07, 21.8638)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.870287, 6.48414e-09, -0.492545, -0.123498, 0.968056, 0.218211, 0.476811, 0.250735, -0.842486, -78.307, 80.7233, -117.791)
+shadow_enabled = true
+
+[node name="Character" parent="." instance=ExtResource("3_qe6be")]
