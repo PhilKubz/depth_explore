@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://bpyqt8foxaxa0"]
+[gd_scene load_steps=11 format=3 uid="uid://bpyqt8foxaxa0"]
 
 [ext_resource type="PackedScene" uid="uid://brxngsya7g3ya" path="res://Scenes/Ground.tscn" id="1_f6y0w"]
 [ext_resource type="PackedScene" uid="uid://da7xu8fx1x211" path="res://Scenes/Crypt_large.tscn" id="2_dkdsg"]
@@ -6,8 +6,10 @@
 [ext_resource type="PackedScene" uid="uid://calirx1x8qoxs" path="res://Scenes/Character.tscn" id="3_qe6be"]
 [ext_resource type="PackedScene" uid="uid://dky8wcfhkx0uk" path="res://Scenes/Ghost.tscn" id="4_pkcso"]
 [ext_resource type="PackedScene" uid="uid://b8jun2mcvr3wu" path="res://Scenes/Crypt_small.tscn" id="6_6ijt8"]
-[ext_resource type="PackedScene" uid="uid://d3yba6eqervpb" path="res://Scenes/Props/Grave_1.tscn" id="7_13ktf"]
-[ext_resource type="PackedScene" uid="uid://cqdyn8cjulwnx" path="res://Scenes/Props/Grave_Tombstone_1.tscn" id="8_34byv"]
+[ext_resource type="PackedScene" uid="uid://bc71o3ltiogq4" path="res://Scenes/Props/Road.tscn" id="8_leytw"]
+[ext_resource type="PackedScene" uid="uid://biwvrlkgnr00p" path="res://Scenes/Props/Pine_Tree.tscn" id="8_m1dcq"]
+[ext_resource type="PackedScene" uid="uid://dj21oi65sx0gp" path="res://Scenes/Crypt.tscn" id="9_13mb3"]
+[ext_resource type="PackedScene" uid="uid://cghuqlvs5khai" path="res://Scenes/Props/Stone_Wall_Curved.tscn" id="10_u75ap"]
 
 [node name="World" type="Node3D"]
 
@@ -17,8 +19,10 @@ transform = Transform3D(200, 0, 0, 0, 200, 0, 0, 0, 200, 0, 0, 0)
 [node name="Skybox" parent="Ground" instance=ExtResource("2_g0lrp")]
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
-transform = Transform3D(-0.870287, 6.48414e-09, -0.492545, -0.123498, 0.968056, 0.218211, 0.476811, 0.250735, -0.842486, -78.307, 80.7233, -117.791)
+transform = Transform3D(0.146653, 0.476619, -0.866791, 0.0264241, 0.874065, 0.485089, 0.988835, -0.0940441, 0.11559, -152.029, 143.124, -19.7551)
+light_color = Color(0.994599, 0.892208, 0.891572, 1)
 shadow_enabled = true
+sky_mode = 1
 
 [node name="Character" parent="." instance=ExtResource("3_qe6be")]
 
@@ -36,17 +40,61 @@ transform = Transform3D(-3.01983, 0, -4.41018, 0, 5.345, 0, 4.41018, 0, -3.01983
 [node name="Crypt_Small2" parent="Background" instance=ExtResource("6_6ijt8")]
 transform = Transform3D(-2.96372, 0, 4.3939, 0, 5.3, 0, -4.3939, 0, -2.96372, -30.1, 0, 10.1)
 
-[node name="Grave_1" parent="Background" instance=ExtResource("7_13ktf")]
-transform = Transform3D(2.25, 0, 0, 0, 2.25, 0, 0, 0, 2.25, 18.8353, 0, 22.4527)
+[node name="Path" type="Node3D" parent="Background"]
 
-[node name="Grave_1" parent="Background/Grave_1" instance=ExtResource("7_13ktf")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.02319, 0, 0.00199413)
+[node name="road2" parent="Background/Path" instance=ExtResource("8_leytw")]
+transform = Transform3D(5.29, 0, 0, 0, 5.29, 0, 0, 0, 5.29, -1.24824, 0, -28.104)
 
-[node name="Grave_2" parent="Background" instance=ExtResource("7_13ktf")]
-transform = Transform3D(2.25, 0, 0, 0, 2.25, 0, 0, 0, 2.25, 14.2767, 0, 22.4527)
+[node name="road3" parent="Background/Path" instance=ExtResource("8_leytw")]
+transform = Transform3D(5.29, 0, 0, 0, 5.29, 0, 0, 0, 5.29, -0.796786, 0, -24.3166)
 
-[node name="Grave_1" parent="Background/Grave_2" instance=ExtResource("7_13ktf")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.02319, 0, 0.00199413)
+[node name="road4" parent="Background/Path" instance=ExtResource("8_leytw")]
+transform = Transform3D(5.29, 0, 0, 0, 5.29, 0, 0, 0, 5.29, -0.834644, 0, -21.0998)
 
-[node name="Grave_Tombstone_1" parent="." instance=ExtResource("8_34byv")]
-transform = Transform3D(-2.25, 0, -1.96701e-07, 0, 2.25, 0, 1.96701e-07, 0, -2.25, 9.79812, -3.72529e-07, 22.3619)
+[node name="road5" parent="Background/Path" instance=ExtResource("8_leytw")]
+transform = Transform3D(5.29, 0, 0, 0, 5.29, 0, 0, 0, 5.29, -1.49457, -7.45058e-07, -17.9485)
+
+[node name="road6" parent="Background/Path" instance=ExtResource("8_leytw")]
+transform = Transform3D(5.28275, 0, 0.276857, 0, 5.29, 0, -0.276857, 0, 5.28275, -1.20164, 0.0101089, -14.4686)
+
+[node name="road7" parent="Background/Path" instance=ExtResource("8_leytw")]
+transform = Transform3D(5.24474, 0, 0.690484, 0, 5.29, 0, -0.690484, 0, 5.24474, -0.918067, -7.45058e-07, -11.9155)
+
+[node name="road8" parent="Background/Path" instance=ExtResource("8_leytw")]
+transform = Transform3D(5.29, 0, 0, 0, 5.28497, -0.230747, 0, 0.230747, 5.28497, -0.652386, -0.0687613, -8.23572)
+
+[node name="road9" parent="Background/Path" instance=ExtResource("8_leytw")]
+transform = Transform3D(5.29, 0, 0, 0, 5.28497, -0.230747, 0, 0.230747, 5.28497, -0.524014, -0.13919, -4.7454)
+
+[node name="road10" parent="Background/Path" instance=ExtResource("8_leytw")]
+transform = Transform3D(5.29, 0, 0, 0, 5.28497, -0.230747, 0, 0.230747, 5.28497, -0.511308, -0.206303, -1.80094)
+
+[node name="Trees" type="Node3D" parent="Background"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0137768, 0.0303507, -0.000867844)
+
+[node name="pine2" parent="Background/Trees" instance=ExtResource("8_m1dcq")]
+transform = Transform3D(8.78, 0, 0, 0, 8.78, 0, 0, 0, 8.78, 7.53489, -0.0303507, -52.6146)
+
+[node name="pine3" parent="Background/Trees" instance=ExtResource("8_m1dcq")]
+transform = Transform3D(8.78, 0, 0, 0, 8.78, 0, 0, 0, 8.78, -14.3572, -0.0303507, -49.4753)
+
+[node name="pine4" parent="Background/Trees" instance=ExtResource("8_m1dcq")]
+transform = Transform3D(8.78, 0, 0, 0, 11.5215, 0, 0, 0, 8.78, -21.1807, -0.0303477, -57.171)
+
+[node name="pine5" parent="Background/Trees" instance=ExtResource("8_m1dcq")]
+transform = Transform3D(8.0909, 0, 0, 0, 8.78, 0, 0, 0, 8.05002, -28.9096, -0.0303507, -43.5074)
+
+[node name="pine6" parent="Background/Trees" instance=ExtResource("8_m1dcq")]
+transform = Transform3D(6.96979, 0, 0, 0, 8.39003, 0, 0, 0, 8.78, 16.9084, -0.0303507, -47.2568)
+
+[node name="pine7" parent="Background/Trees" instance=ExtResource("8_m1dcq")]
+transform = Transform3D(9.30986, 0, 0, 0, 9.34501, 0, 0, 0, 8.78, -9.15884, -0.0303537, -61.3559)
+
+[node name="pine8" parent="Background/Trees" instance=ExtResource("8_m1dcq")]
+transform = Transform3D(8.78, 0, 0, 0, 10.3005, 0, 0, 0, 8.78, 0.852797, -0.0303515, -59.619)
+
+[node name="crypt2" parent="." instance=ExtResource("9_13mb3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.35819, 0, -39.7363)
+
+[node name="stone-wall-curve2" parent="." instance=ExtResource("10_u75ap")]
+transform = Transform3D(8.09882, 0, 8.82098, 0, 11.975, 0, -8.82098, 0, 8.09882, -47.1707, 0.0301679, -25.9103)
