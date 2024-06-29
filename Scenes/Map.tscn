@@ -10,7 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://biwvrlkgnr00p" path="res://Scenes/Props/Pine_Tree.tscn" id="8_m1dcq"]
 [ext_resource type="PackedScene" uid="uid://qqdw6xnrl53d" path="res://Scenes/Props/Road_Slope_Ramp.tscn" id="8_sw08h"]
 [ext_resource type="PackedScene" uid="uid://dj21oi65sx0gp" path="res://Scenes/Crypt.tscn" id="9_13mb3"]
-[ext_resource type="PackedScene" uid="uid://cghuqlvs5khai" path="res://Scenes/Props/Stone_Wall_Curved.tscn" id="10_u75ap"]
+[ext_resource type="PackedScene" uid="uid://ech0i2etordh" path="res://Scenes/Props/Stone_Wall.tscn" id="11_i1prt"]
 
 [node name="World" type="Node3D"]
 
@@ -97,8 +97,11 @@ transform = Transform3D(9.30986, 0, 0, 0, 9.34501, 0, 0, 0, 8.78, -9.15884, -0.0
 [node name="pine8" parent="Background/Trees" instance=ExtResource("8_m1dcq")]
 transform = Transform3D(8.78, 0, 0, 0, 10.3005, 0, 0, 0, 8.78, 0.852797, -0.0303515, -59.619)
 
-[node name="crypt2" parent="." instance=ExtResource("9_13mb3")]
+[node name="crypt2" parent="Background" instance=ExtResource("9_13mb3")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.35819, 0, -39.7363)
 
-[node name="stone-wall-curve2" parent="." instance=ExtResource("10_u75ap")]
-transform = Transform3D(8.09882, 0, 8.82098, 0, 11.975, 0, -8.82098, 0, 8.09882, -47.1707, 0.0301679, -25.9103)
+[node name="Stone Wall" parent="." instance=ExtResource("11_i1prt")]
+transform = Transform3D(9, 0, 0, 0, 9, 0, 0, 0, 9, -23, 0, 4.632)
+
+[node name="Stone Wall2" parent="." instance=ExtResource("11_i1prt")]
+transform = Transform3D(-9, 0, -0.00345604, 0, 9, 0, 0.00345604, 0, -9, 23, 0, -3.622)
