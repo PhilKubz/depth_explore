@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://bpyqt8foxaxa0"]
+[gd_scene load_steps=12 format=3 uid="uid://bpyqt8foxaxa0"]
 
 [ext_resource type="PackedScene" uid="uid://brxngsya7g3ya" path="res://Scenes/Ground.tscn" id="1_f6y0w"]
 [ext_resource type="PackedScene" uid="uid://da7xu8fx1x211" path="res://Scenes/Crypt_large.tscn" id="2_dkdsg"]
@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://b8jun2mcvr3wu" path="res://Scenes/Crypt_small.tscn" id="6_6ijt8"]
 [ext_resource type="PackedScene" uid="uid://bc71o3ltiogq4" path="res://Scenes/Props/Road.tscn" id="8_leytw"]
 [ext_resource type="PackedScene" uid="uid://biwvrlkgnr00p" path="res://Scenes/Props/Pine_Tree.tscn" id="8_m1dcq"]
+[ext_resource type="PackedScene" uid="uid://qqdw6xnrl53d" path="res://Scenes/Props/Road_Slope_Ramp.tscn" id="8_sw08h"]
 [ext_resource type="PackedScene" uid="uid://dj21oi65sx0gp" path="res://Scenes/Crypt.tscn" id="9_13mb3"]
 [ext_resource type="PackedScene" uid="uid://cghuqlvs5khai" path="res://Scenes/Props/Stone_Wall_Curved.tscn" id="10_u75ap"]
 
@@ -43,7 +44,7 @@ transform = Transform3D(-2.96372, 0, 4.3939, 0, 5.3, 0, -4.3939, 0, -2.96372, -3
 [node name="Path" type="Node3D" parent="Background"]
 
 [node name="road2" parent="Background/Path" instance=ExtResource("8_leytw")]
-transform = Transform3D(5.29, 0, 0, 0, 5.29, 0, 0, 0, 5.29, -1.24824, 0, -28.104)
+transform = Transform3D(5.29, 0, 0, 0, 5.29, 0, 0, 0, 5.29, -1.24824, -2.17906, -28.104)
 
 [node name="road3" parent="Background/Path" instance=ExtResource("8_leytw")]
 transform = Transform3D(5.29, 0, 0, 0, 5.29, 0, 0, 0, 5.29, -0.796786, 0, -24.3166)
@@ -68,6 +69,9 @@ transform = Transform3D(5.29, 0, 0, 0, 5.28497, -0.230747, 0, 0.230747, 5.28497,
 
 [node name="road10" parent="Background/Path" instance=ExtResource("8_leytw")]
 transform = Transform3D(5.29, 0, 0, 0, 5.28497, -0.230747, 0, 0.230747, 5.28497, -0.511308, -0.206303, -1.80094)
+
+[node name="road11" parent="Background/Path" instance=ExtResource("8_sw08h")]
+transform = Transform3D(5.29, 0, 0, 0, 5.251, -0.641207, 0, 0.641207, 5.251, -1.28945, 0.160045, -27.8866)
 
 [node name="Trees" type="Node3D" parent="Background"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0137768, 0.0303507, -0.000867844)
