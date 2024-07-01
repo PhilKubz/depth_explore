@@ -15,7 +15,12 @@ sky = SubResource("Sky_cc0yc")
 ambient_light_energy = 0.0
 tonemap_mode = 3
 tonemap_exposure = 1.84
-fog_light_color = Color(0.630589, 0.499536, 0.632823, 1)
+fog_enabled = true
+fog_light_color = Color(0.581416, 0.723313, 0.687948, 1)
+fog_density = 0.001
+fog_sky_affect = 0.013
+volumetric_fog_enabled = true
+volumetric_fog_density = 0.0
 
 [node name="Skybox" type="Node3D"]
 

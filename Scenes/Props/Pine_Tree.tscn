@@ -38,7 +38,7 @@ blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_wn81q")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_b3wkr"]
-albedo_color = Color(0.740197, 0.941835, 0.879843, 1)
+albedo_color = Color(0.741176, 0.941176, 0.878431, 1)
 
 [sub_resource type="CylinderMesh" id="CylinderMesh_wx3mo"]
 
@@ -52,6 +52,7 @@ points = PackedVector3Array(-0.000115275, 0.291835, 0.667279, -0.270285, 0.71008
 transform = Transform3D(8.78, 0, 0, 0, 8.78, 0, 0, 0, 8.78, 0, 0, 0)
 
 [node name="pine" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 mesh = SubResource("ArrayMesh_62v7f")
 skeleton = NodePath("")
 surface_material_override/0 = SubResource("StandardMaterial3D_b3wkr")
@@ -62,5 +63,4 @@ mesh = SubResource("CylinderMesh_wx3mo")
 surface_material_override/0 = SubResource("StandardMaterial3D_geg0p")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 shape = SubResource("ConvexPolygonShape3D_2jw3l")
