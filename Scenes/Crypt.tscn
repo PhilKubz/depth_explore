@@ -198,7 +198,7 @@ transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, -1.13307, 0.908217, 7.78214)
 [node name="crypt-door" type="Node3D" parent="crypt-door2"]
 
 [node name="door" type="MeshInstance3D" parent="crypt-door2/crypt-door"]
-transform = Transform3D(1, 0, -3.87541e-16, 0, 1, 0, 3.87541e-16, 0, 1, 0, 0, 0)
+transform = Transform3D(1, 0, -3.8754e-16, 0, 1, 0, 3.8754e-16, 0, 1, 0, 0, 0)
 mesh = SubResource("ArrayMesh_eqjdp")
 skeleton = NodePath("")
 surface_material_override/0 = SubResource("StandardMaterial3D_cx0wa")

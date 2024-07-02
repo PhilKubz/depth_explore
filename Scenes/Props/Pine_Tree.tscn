@@ -52,7 +52,6 @@ points = PackedVector3Array(-0.000115275, 0.291835, 0.667279, -0.270285, 0.71008
 transform = Transform3D(8.78, 0, 0, 0, 8.78, 0, 0, 0, 8.78, 0, 0, 0)
 
 [node name="pine" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 mesh = SubResource("ArrayMesh_62v7f")
 skeleton = NodePath("")
 surface_material_override/0 = SubResource("StandardMaterial3D_b3wkr")

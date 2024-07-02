@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://cnkwfi8cht4ue"]
+
+[ext_resource type="PackedScene" uid="uid://dokxntf6pxaau" path="res://Assets/Mound.glb" id="1_dvc64"]
+
+[node name="Mound" instance=ExtResource("1_dvc64")]
