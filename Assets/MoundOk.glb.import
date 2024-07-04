@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://dokxntf6pxaau"
-path="res://.godot/imported/Mound.glb-eae30dedd88fa2f2989f447e1c379923.scn"
+uid="uid://bt3alliieagk"
+path="res://.godot/imported/MoundOk.glb-2618bdd087e535af748baa217900582e.scn"
 
 [deps]
 
-source_file="res://Assets/Mound.glb"
-dest_files=["res://.godot/imported/Mound.glb-eae30dedd88fa2f2989f447e1c379923.scn"]
+source_file="res://Assets/MoundOk.glb"
+dest_files=["res://.godot/imported/MoundOk.glb-2618bdd087e535af748baa217900582e.scn"]
 
 [params]
 
